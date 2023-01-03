@@ -48,6 +48,7 @@
                             <td>{{ $category->products_count }}</td>
                             <td>{{ $category->parent->name ?? '' }}</td>
                             <td>
+                                {{-- auth --}}
                                 @can('category_create')
                                 <div class="btn-group btn-group-sm">
                                     <a href="{{ route('admin.categories.edit', $category) }}" class="btn btn-sm btn-primary">
